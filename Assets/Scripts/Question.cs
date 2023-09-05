@@ -9,9 +9,11 @@ public class Question : MonoBehaviour
     public string[] question;
     public TMP_Text questionText;
     public bool[] isAnswer = { true, true, true, true, false, true, false, false };
+    public ButtonScript buttonScript;
     
     public void SetQuestion(int index)
     {
         questionText.text = question[index];
+        buttonScript.anwsers = !isAnswer[index];
     }
 }

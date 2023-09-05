@@ -895,6 +895,7 @@ MonoBehaviour:
     \uBC97\uC5B4\uB098\uC9C0 \uC54A\uB294\uB2E4."
   questionText: {fileID: 1643784687}
   isAnswer: 0101010100010000
+  buttonScript: {fileID: 702060034}
 --- !u!4 &702060033
 Transform:
   m_ObjectHideFlags: 0
@@ -922,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7cc0d4d4419b341a9d5b850f186bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anwsers: 0
+  anwsers: 1
 --- !u!1 &708920412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,7 +2268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerImage: {fileID: 1696329284}
-  timerTime: 5
+  timerTime: 1
   xImage: {fileID: 815463187}
   oImage: {fileID: 397729922}
   hpImage:
@@ -2385,8 +2386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 6.299988, y: 15.359985}
+  m_SizeDelta: {x: -88.22, y: -30.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643784687
 MonoBehaviour:
@@ -2435,8 +2436,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

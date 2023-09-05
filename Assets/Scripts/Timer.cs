@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     [SerializeField][Tooltip("타이머 이미지")]
     private Image timerImage;
-    [SerializeField][Tooltip("타이머 시간")]
+    [SerializeField][Tooltip("타이머 시간")][Range(1, 10)]
     public float timerTime;
     Question question;
     int questionIndex = 0;
