@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private Image xImage;
     [SerializeField] private TMP_Text oImage;
     public Image[] hpImage;
-    public int hp = 3;
+    public int hp = 2;
     public TMP_Text Text;
     
 
@@ -24,6 +25,7 @@ public class Timer : MonoBehaviour
     {
         question = FindObjectOfType<Question>();
         buttonScript = FindObjectOfType<ButtonScript>();
+        hp = Mathf.Max(0, 2);
     }
 
     private void Start()
@@ -35,7 +37,12 @@ public class Timer : MonoBehaviour
 
     void HPUpdate()
     {
-        hpImage[hp-1].gameObject.SetActive(false);
+        if (hp < 0)
+        {
+            SceneManager.LoadScene(3);
+        }
+        if(hp >= 0)
+            hpImage[hp].gameObject.SetActive(false);
     }
     IEnumerator TimerCoroutine(float time)
     {
@@ -81,8 +88,9 @@ public class Timer : MonoBehaviour
             questionIndex++;
         }
 
-        if (questionIndex >= question.question.Length)
+        if (questionIndex >= question.question.Length || hp < 0)
         {
+            SceneManager.LoadScene(3);
             yield break;
         }
         goto a;
