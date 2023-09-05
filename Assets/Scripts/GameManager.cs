@@ -28,21 +28,21 @@ public class GameManager : MonoBehaviour
         
     }
 
-    IEnumerator AfterExplanation()
-    {
+    //IEnumerator AfterExplanation()
+    //{
 
-    }
+    //}
 
     public void Correct()
     {
         //
-        StartCoroutine(AfterExplanation());
+     //   StartCoroutine(AfterExplanation());
     }
 
     public void Incorrect()
     {
         //체력 감소하는 애니메이션 구현해줘
-        StartCoroutine(AfterExplanation());
+     //   StartCoroutine(AfterExplanation());
     }
 
     public void CheckAnswer(int num)
