@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     public Image[] hpImage;
     public int hp = 2;
     public TMP_Text Text;
+    public GameObject blockPanel;
     
 
     private void Awake()
@@ -30,11 +31,15 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(TimerCoroutine(time:timerTime));
+        StartCoroutine(FiveSecondEndStart());
     }
 
-    
-
+    IEnumerator FiveSecondEndStart(float time = 5f)
+    {
+        yield return new WaitForSeconds(time);
+        blockPanel.SetActive(false);
+        StartCoroutine(TimerCoroutine(time:timerTime));
+    }
     void HPUpdate()
     {
         if (hp < 0)
