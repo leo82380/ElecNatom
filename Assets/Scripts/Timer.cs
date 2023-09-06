@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     public Image[] hpImage;
     public int hp = 2;
     public TMP_Text Text;
+    public TMP_Text leftTime;
     public GameObject blockPanel;
     
 
@@ -36,7 +37,10 @@ public class Timer : MonoBehaviour
 
     IEnumerator FiveSecondEndStart(float time = 5f)
     {
-        yield return new WaitForSeconds(time);
+        for(int a=5; a >= 0; a--) { 
+            leftTime.text = $"{a}초 뒤 시작합니다....";
+            yield return new WaitForSeconds(time/5);
+        }
         blockPanel.SetActive(false);
         StartCoroutine(TimerCoroutine(time:timerTime));
     }
@@ -49,6 +53,19 @@ public class Timer : MonoBehaviour
         if(hp >= 0)
             hpImage[hp].gameObject.SetActive(false);
     }
+
+    IEnumerator Gameflow()
+    {
+        /*
+        첫번째로 타이머를 작동시킴.
+        만약에 입력이 들어오면 입력을 작동시키고 타이머 작동을 멈춤
+        타이머가 끝날때 까지 아무 입력이 없으면 타임아웃처리
+
+        */
+        yield return null;
+    }
+
+
     IEnumerator TimerCoroutine(float time)
     {
         a:
