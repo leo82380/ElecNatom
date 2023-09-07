@@ -491,9 +491,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 702060034}
-        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
-        m_MethodName: O
+      - m_Target: {fileID: 1432669199}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: OAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -893,6 +893,35 @@ MonoBehaviour:
     \uC54A\uB294\uB2E4. \uADF8\uB7EC\uBBC0\uB85C \uC9C0\uAD6C\uB294 \uC804\uAE30\uB825\uC774
     \uC791\uC6A9\uD558\uAE30 \uB54C\uBB38\uC5D0 \uD0DC\uC591 \uC8FC\uC704\uC5D0\uC11C
     \uBC97\uC5B4\uB098\uC9C0 \uC54A\uB294\uB2E4."
+  explanation:
+  - "\uC11C\uB85C \uB2E4\uB978 \uB450 \uBB3C\uCCB4\uB97C \uB9C8\uCC30\uD558\uBA74
+    \uC804\uAE30\uB97C \uB760\uB294\uB370, \uBB3C\uCCB4\uAC00 \uC804\uAE30\uB97C
+    \uB760\uB294 \uD604\uC0C1\uC744 \uB300\uC804\uC774\uB77C\uACE0 \uD55C\uB2E4."
+  - "\uB450 \uC804\uD558 \uC0AC\uC774\uC5D0 \uC804\uAE30\uB825\uC758 \uD06C\uAE30\uAC00
+    \uC804\uD558\uB7C9\uC758 \uACF1\uC5D0 \uBE44\uB840\uD558\uACE0, \uB450 \uC804\uD558
+    \uC0AC\uC774\uC758 \uAC70\uB9AC \uC81C\uACF1\uC5D0 \uBC18\uBE44\uB840\uD55C\uB2E4.
+    \uC774\uB294 \uCFE8\uB871 \uBC95\uCE59\uC774\uB77C\uACE0 \uD55C\uB2E4."
+  - "\uBC18\uB370\uADF8\uB798\uD504 \uBC1C\uC804\uAE30\uB294 \uB9C8\uCC30\uC744 \uC774\uC6A9\uD574
+    \uC804\uAE30\uB97C \uCD95\uC804\uD558\uB294 \uAE30\uACC4\uC774\uB2E4."
+  - "\uC804\uAE30\uB97C \uB764 \uBB3C\uCCB4 \uC0AC\uC774\uC5D0\uB294 \uD798\uC774
+    \uC791\uC6A9\uD558\uB294\uB370, \uB2E4\uB978 \uC885\uB958\uC758 \uC804\uD558
+    \uC0AC\uC774\uC5D0\uC11C\uB294 \uC11C\uB85C \uB04C\uC5B4\uB2F9\uAE30\uB294 \uC778\uB825\uC774
+    \uC791\uC6A9\uD55C\uB2E4."
+  - "\uC804\uC790\uB294 (-)\uC804\uD558\uC640 \uCC99\uB825, (+)\uC804\uD558\uC640
+    \uC778\uB825\uC774 \uC791\uC6A9\uD558\uAE30 \uB54C\uBB38\uC5D0 (+)\uADF9\uC73C\uB85C
+    \uD718\uC5B4\uC838\uC57C \uD55C\uB2E4. "
+  - "\uB7EC\uB354\uD37C\uB4DC\uB294 \uC54C\uD30C \uC785\uC790 \uC0B0\uB780 \uC2E4\uD5D8\uC5D0\uC11C
+    \uC77C\uBD80 \uC54C\uD30C \uC785\uC790\uB4E4\uC774 \uD295\uACA8 \uB098\uC624\uB294
+    \uD604\uC0C1\uC744 \uBCF4\uACE0 \uC6D0\uC790 \uAC00\uC6B4\uB370\uC758 \uC881\uC740
+    \uACF5\uAC04\uC5D0 \uBE7D\uBE7D\uD558\uAC8C \uBAA8\uC5EC \uC788\uB294 (+)\uC804\uD558\uB97C
+    \uB764 \uBB3C\uC9C8\uC778 \uC6D0\uC790\uD575\uC758 \uC874\uC7AC\uB97C \uBC1C\uACAC\uD558\uC600\uB2E4."
+  - "F2\uB97C \uACC4\uC0B0\uD558\uBA74 F2 = F1 / 2\uC774\uB2E4. \uADF8\uB7EC\uBBC0\uB85C
+    (F1/2) / F1 =1/2 / 1 \uC740 1/2\uAC00 \uB418\uC5B4\uC57C \uD55C\uB2E4."
+  - "\uC804\uC790\uAC00 \uC6D0\uC790\uD575 \uC8FC\uBCC0\uC744 \uB3C4\uB294 \uAC83\uACFC
+    \uC9C0\uAD6C\uAC00 \uD0DC\uC591 \uC8FC\uBCC0\uC744 \uB3C4\uB294 \uAC83\uC740
+    \uBE44\uC2B7\uD55C \uAD6C\uC870\uC774\uC9C0\uB9CC, \uC804\uC790\uC640 \uC6D0\uC790\uD575\uC740
+    \uC804\uAE30\uB825, \uC9C0\uAD6C\uC640 \uD0DC\uC591\uC740 \uC911\uB825\uC774\uB77C\uB294
+    \uB2E4\uB978 \uC885\uB958\uC758 \uD798\uC774 \uC791\uC6A9\uD558\uACE0 \uC788\uB2E4."
   questionText: {fileID: 1643784687}
   isAnswer: 0101010100010000
   buttonScript: {fileID: 702060034}
@@ -1178,6 +1207,7 @@ RectTransform:
   - {fileID: 397260917}
   - {fileID: 815463186}
   - {fileID: 397729920}
+  - {fileID: 1356763941}
   - {fileID: 1377078270}
   - {fileID: 1413497769}
   m_Father: {fileID: 0}
@@ -1912,6 +1942,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315589314}
   m_CullTransparentMesh: 1
+--- !u!1 &1356763940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356763941}
+  - component: {fileID: 1356763943}
+  - component: {fileID: 1356763942}
+  m_Layer: 0
+  m_Name: TImeOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1356763941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356763940}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -9720}
+  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 849419010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 19, y: 137}
+  m_SizeDelta: {x: 6.52, y: 3.62}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1356763942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356763940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: d1271471ba2f9fd46be5408c43119939, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1356763943
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356763940}
+  m_CullTransparentMesh: 1
 --- !u!1 &1377078269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,9 +2234,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 702060034}
-        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
-        m_MethodName: X
+      - m_Target: {fileID: 1432669199}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: XAnswer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2196,7 +2301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1413497769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2347,6 +2452,7 @@ MonoBehaviour:
   timerImage: {fileID: 1696329284}
   timerTime: 5
   xImage: {fileID: 815463187}
+  timeoverImage: {fileID: 1356763942}
   oImage: {fileID: 397729922}
   hpImage:
   - {fileID: 1059103318}
@@ -2356,6 +2462,12 @@ MonoBehaviour:
   Text: {fileID: 1377078271}
   leftTime: {fileID: 2103056181}
   blockPanel: {fileID: 1413497768}
+  talkText: {fileID: 1899013239}
+  nameText: {fileID: 1315589316}
+  student: {fileID: 1674226550}
+  teacher: {fileID: 1015906468}
+  textSpeed: 49
+  talkpanel: {fileID: 547214383}
 --- !u!1 &1499408898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2465,7 +2577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 6.299988, y: 15.359985}
+  m_AnchoredPosition: {x: 6.300049, y: 15.359985}
   m_SizeDelta: {x: -88.22, y: -30.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643784687
