@@ -33,6 +33,8 @@ public class Timer : MonoBehaviour
     public int textSpeed;
     public GameObject talkpanel;
 
+    int correctnum = 0;
+
     IEnumerator correctChat()
     {
         talkpanel.transform.DOMoveY(0, 0.5f);
@@ -40,6 +42,7 @@ public class Timer : MonoBehaviour
         yield return StartCoroutine(NormalChat("선생", "오!"));
         yield return StartCoroutine(NormalChat("선생", "내 학생이 이 문제를 맞추다니?!"));
         yield return StartCoroutine(NormalChat("선생", "뿌듯하구만."));
+        correctnum++;
         teacher.color = new Color(1, 1, 1, 0.5f);
         talkpanel.transform.DOMoveY(-50f, 0.5f);
         StartCoroutine(nextProblem());
@@ -93,6 +96,7 @@ public class Timer : MonoBehaviour
     {
         if (hp < 0)
         {
+            PlayerPrefs.SetInt("num", correctnum);
             SceneManager.LoadScene(3);
         }
         if(hp >= 0)
