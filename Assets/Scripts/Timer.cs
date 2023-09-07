@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Timer : MonoBehaviour
 {
@@ -34,24 +35,24 @@ public class Timer : MonoBehaviour
 
     IEnumerator correctChat()
     {
-        talkpanel.SetActive(true);
+        talkpanel.transform.DOMoveY(0, 0.5f);
         teacher.color = new Color(1, 1, 1, 1);
         yield return StartCoroutine(NormalChat("선생", "오!"));
         yield return StartCoroutine(NormalChat("선생", "내 학생이 이 문제를 맞추다니?!"));
         yield return StartCoroutine(NormalChat("선생", "뿌듯하구만."));
         teacher.color = new Color(1, 1, 1, 0.5f);
-        talkpanel.SetActive(false);
+        talkpanel.transform.DOMoveY(-50f, 0.5f);
         StartCoroutine(nextProblem());
     }
     IEnumerator wrongChat()
     {
-        talkpanel.SetActive(true);
+        talkpanel.transform.DOMoveY(0, 0.5f);
         student.color = new Color(1, 1, 1, 1);
         yield return StartCoroutine(NormalChat("학생", "윽!"));
         yield return StartCoroutine(NormalChat("학생", "내가 고작 이런 문제를 틀리다니?!"));
         yield return StartCoroutine(NormalChat("학생", "수치스럽다..."));
         student.color = new Color(1, 1, 1, 0.5f);
-        talkpanel.SetActive(false);
+        talkpanel.transform.DOMoveY(-50f, 0.5f);
         StartCoroutine(nextProblem());
     }
 
@@ -161,7 +162,7 @@ public class Timer : MonoBehaviour
         /*
         첫번째로 타이머를 작동시킴.
         만약에 입력이 들어오면 입력을 작동시키고 타이머 작동을 멈춤
-        타이머가 끝날때 까지 아무 입력이 없으면 타임아웃처리 
+        타이머가 끝날때 까지 아무 입력이 없으면 타임아웃처리
 
         정답을 확인함
         정답이면 O표시

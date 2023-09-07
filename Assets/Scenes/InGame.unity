@@ -558,7 +558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &397260917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -579,7 +579,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: -1080}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &397260918
@@ -789,7 +789,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -299.99997}
+  m_AnchoredPosition: {x: 0, y: -300}
   m_SizeDelta: {x: -276, y: -754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547214385
@@ -2301,7 +2301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1413497769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2467,7 +2467,7 @@ MonoBehaviour:
   student: {fileID: 1674226550}
   teacher: {fileID: 1015906468}
   textSpeed: 49
-  talkpanel: {fileID: 547214383}
+  talkpanel: {fileID: 397260916}
 --- !u!1 &1499408898
 GameObject:
   m_ObjectHideFlags: 0
