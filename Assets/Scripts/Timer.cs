@@ -38,36 +38,33 @@ public class Timer : MonoBehaviour
     IEnumerator correctChat()
     {
         talkpanel.transform.DOMoveY(0, 0.5f);
-        teacher.color = new Color(1, 1, 1, 1);
         yield return StartCoroutine(NormalChat("선생", "오!"));
         yield return StartCoroutine(NormalChat("선생", "내 학생이 이 문제를 맞추다니?!"));
         yield return StartCoroutine(NormalChat("선생", "뿌듯하구만."));
         correctnum++;
-        teacher.color = new Color(1, 1, 1, 0.5f);
         talkpanel.transform.DOMoveY(-50f, 0.5f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine(nextProblem());
     }
     IEnumerator wrongChat()
     {
         talkpanel.transform.DOMoveY(0, 0.5f);
-        student.color = new Color(1, 1, 1, 1);
         yield return StartCoroutine(NormalChat("학생", "윽!"));
         yield return StartCoroutine(NormalChat("학생", "내가 고작 이런 문제를 틀리다니?!"));
         yield return StartCoroutine(NormalChat("학생", "수치스럽다..."));
-        student.color = new Color(1, 1, 1, 0.5f);
         talkpanel.transform.DOMoveY(-50f, 0.5f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine(nextProblem());
     }
 
     IEnumerator overtimeChat()
     {
-        talkpanel.SetActive(true);
-        student.color = new Color(1, 1, 1, 1);
+        talkpanel.transform.DOMoveY(0, 0.5f);
         yield return StartCoroutine(NormalChat("학생", "윽!"));
         yield return StartCoroutine(NormalChat("학생", "내가 고작 이런 문제를 풀지 못하다니?!"));
         yield return StartCoroutine(NormalChat("학생", "수치스럽다..."));
-        student.color = new Color(1, 1, 1, 0.5f);
-        talkpanel.SetActive(false);
+        talkpanel.transform.DOMoveY(-50f, 0.5f);
+        yield return new WaitForSeconds(5f);
         StartCoroutine(nextProblem());
     }
 
@@ -96,6 +93,7 @@ public class Timer : MonoBehaviour
     {
         if (hp < 0)
         {
+            DOTween.KillAll();
             PlayerPrefs.SetInt("num", correctnum);
             SceneManager.LoadScene(3);
         }
@@ -122,11 +120,16 @@ public class Timer : MonoBehaviour
 
         while(!timeout && !input)
         {
+            if(timer <= 0)
+            {
+                timeout = true;
+            }
             yield return null;
         }
         StopCoroutine("Problemtimer");
-
-
+        
+        
+        
         if (input && currentAnswer == question.isAnswer[questionIndex])
         {
             oImage.gameObject.SetActive(true);
@@ -185,7 +188,13 @@ public class Timer : MonoBehaviour
     {
         questionIndex++;
         if(questionIndex<8)
-        StartCoroutine(Gameflow());
+            StartCoroutine(Gameflow());
+        if (questionIndex >= 8)
+        {
+            SceneManager.LoadScene(3);
+            DOTween.KillAll();
+        }
+
         yield return null;
 
     }

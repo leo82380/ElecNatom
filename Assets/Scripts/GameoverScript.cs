@@ -13,7 +13,7 @@ public class GameoverScript : MonoBehaviour
     public Image teacher;
     public int correctnum;
     public char score;
-    // Start is called before the first frame update
+    
     void Start()
     {
         correctnum = PlayerPrefs.GetInt("num");
@@ -25,11 +25,6 @@ public class GameoverScript : MonoBehaviour
         else if (correctnum < 9) { score = 'A'; }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     IEnumerator Chat()
     {
@@ -55,9 +50,9 @@ public class GameoverScript : MonoBehaviour
         nameText.text = narrator;
         string output = "";
         talkText.text = "";
-        for (int a = 0; a < content.Length; a++)
+        foreach (var t in content)
         {
-            output += content[a];
+            output += t;
             talkText.text = output;
             for (int b = 0; b < 20; b++)
             {
@@ -65,7 +60,6 @@ public class GameoverScript : MonoBehaviour
                 if (Input.anyKeyDown) break;
             }
             if (Input.anyKeyDown) break;
-
         }
         talkText.text = content;
 

@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 425107639}
   - component: {fileID: 425107638}
   m_Layer: 5
-  m_Name: Teacher
+  m_Name: Mom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,8 +291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 513, y: -83.95}
-  m_SizeDelta: {x: 500.31, y: 732.79}
+  m_AnchoredPosition: {x: 487.48004, y: -99.089966}
+  m_SizeDelta: {x: 669.04, y: 669.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425107638
 MonoBehaviour:
@@ -307,14 +307,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.89432144, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: db315fe133929ba4f893049094b23a38, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -492,6 +492,8 @@ MonoBehaviour:
   nameText: {fileID: 225032521}
   student: {fileID: 2096926786}
   teacher: {fileID: 425107638}
+  correctnum: 0
+  score: 117
 --- !u!114 &628359388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -663.36, y: -99.089966}
+  m_AnchoredPosition: {x: -663.36005, y: -99.089966}
   m_SizeDelta: {x: -1602.7, y: -1004.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &850066612
@@ -942,8 +944,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -497.42, y: -83.95}
-  m_SizeDelta: {x: 500.31, y: 732.79}
+  m_AnchoredPosition: {x: -518, y: -49.77}
+  m_SizeDelta: {x: 801.15, y: 801.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2096926786
 MonoBehaviour:
@@ -958,14 +960,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.021390608, g: 0.6132076, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb71b228230854f46ae37878000c86dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
