@@ -17,12 +17,14 @@ public class GameoverScript : MonoBehaviour
     void Start()
     {
         correctnum = PlayerPrefs.GetInt("num");
-        StartCoroutine(Chat());
+        print(correctnum);
+        print(PlayerPrefs.GetInt("num"));
         if (correctnum < 3) { score = 'F'; }
         else if (correctnum < 5) { score = 'D'; }
         else if (correctnum < 7) { score = 'C'; }
         else if (correctnum < 8) { score = 'B'; }
         else if (correctnum < 9) { score = 'A'; }
+        StartCoroutine(Chat());
     }
 
 

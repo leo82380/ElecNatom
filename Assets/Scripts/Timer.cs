@@ -26,6 +26,8 @@ public class Timer : MonoBehaviour
     float timer;
     bool currentAnswer, input=false, timeout = false;
 
+    [SerializeField] private GameObject[] buttons;
+
     public TMP_Text talkText;
     public TMP_Text nameText;
     public Image student;
@@ -41,9 +43,18 @@ public class Timer : MonoBehaviour
         yield return StartCoroutine(NormalChat("선생", "오!"));
         yield return StartCoroutine(NormalChat("선생", "내 학생이 이 문제를 맞추다니?!"));
         yield return StartCoroutine(NormalChat("선생", "뿌듯하구만."));
-        correctnum++;
+        ++correctnum;
+        PlayerPrefs.SetInt("num", correctnum);
         talkpanel.transform.DOMoveY(-50f, 0.5f);
-        yield return new WaitForSeconds(5f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(false);
+        }
+        yield return new WaitForSeconds(3f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(true);
+        }
         StartCoroutine(nextProblem());
     }
     IEnumerator wrongChat()
@@ -53,7 +64,15 @@ public class Timer : MonoBehaviour
         yield return StartCoroutine(NormalChat("학생", "내가 고작 이런 문제를 틀리다니?!"));
         yield return StartCoroutine(NormalChat("학생", "수치스럽다..."));
         talkpanel.transform.DOMoveY(-50f, 0.5f);
-        yield return new WaitForSeconds(5f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(false);
+        }
+        yield return new WaitForSeconds(3f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(true);
+        }
         StartCoroutine(nextProblem());
     }
 
@@ -64,7 +83,15 @@ public class Timer : MonoBehaviour
         yield return StartCoroutine(NormalChat("학생", "내가 고작 이런 문제를 풀지 못하다니?!"));
         yield return StartCoroutine(NormalChat("학생", "수치스럽다..."));
         talkpanel.transform.DOMoveY(-50f, 0.5f);
-        yield return new WaitForSeconds(5f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(false);
+        }
+        yield return new WaitForSeconds(3f);
+        foreach (var item in buttons)
+        {
+            item.SetActive(true);
+        }
         StartCoroutine(nextProblem());
     }
 
@@ -94,7 +121,6 @@ public class Timer : MonoBehaviour
         if (hp < 0)
         {
             DOTween.KillAll();
-            PlayerPrefs.SetInt("num", correctnum);
             SceneManager.LoadScene(3);
         }
         if(hp >= 0)
@@ -127,9 +153,6 @@ public class Timer : MonoBehaviour
             yield return null;
         }
         StopCoroutine("Problemtimer");
-        
-        
-        
         if (input && currentAnswer == question.isAnswer[questionIndex])
         {
             oImage.gameObject.SetActive(true);

@@ -2462,6 +2462,10 @@ MonoBehaviour:
   Text: {fileID: 1377078271}
   leftTime: {fileID: 2103056181}
   blockPanel: {fileID: 1413497768}
+  buttons:
+  - {fileID: 377184208}
+  - {fileID: 1378528612}
+  - {fileID: 985804558}
   talkText: {fileID: 1899013239}
   nameText: {fileID: 1315589316}
   student: {fileID: 1674226550}
